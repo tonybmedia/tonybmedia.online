@@ -4,6 +4,23 @@
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+    // Array of image URLs
+    var images = [
+        'compass.jpg',
+        'clock.jpg',
+        'web-droplets.jpg',
+        // Add more image URLs as needed
+    ];
+
+    // Select a random image from the array
+    var randomIndex = Math.floor(Math.random() * images.length);
+    var selectedImage = images[randomIndex];
+
+    // Set the src attribute of the image element to display the selected image
+    document.getElementById('HeaderImage').src = selectedImage;
+</script>
+
   <style>
   @font-face { font-family: Samuel; src: url('Samuel.TTF'); } 
       h1 {
@@ -57,7 +74,9 @@
 .image-container img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 25%;
+	object-fit: cover;
+	overflow:hidden;
 }
 
 .overlaytext {
@@ -109,7 +128,8 @@
   </div>
     <div class="bar">&nbsp;</div>
     <br><br>  <br>
-    <p>i am sad i am filling space</p>
+    <img class="image-container" id="HeaderImage" src="" alt="Displayed Image">
+
       <br><br>  <br>
   <h2 class="overlaytext">
    Photography
