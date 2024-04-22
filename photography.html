@@ -7,9 +7,9 @@
 	<script>
     // Array of image URLs
     var images = [
-        'compass.jpg',
-        'clock.jpg',
-        'web-droplets.jpg',
+        'compass.JPG',
+        'clock.JPG',
+        'web-droplets.JPG',
         // Add more image URLs as needed
     ];
 
@@ -66,31 +66,42 @@
     color:SteelBlue;
     text-decoration:none;
   }
-  .image-container {
-  position: relative;
+  #HeaderImage {
+  
   display: inline-block;
+	  
+	  
 }
 
 .image-container img {
-  display: block;
-  width: 100%;
-  height: 25%;
+  display: inline-block;
+	width: 100%;
 	object-fit: cover;
-	overflow:hidden;
+	object-position: 50% 60% ;
+	overflow: hidden;
+	max-height: 200px;
+	min-height: 100px;
+	
 }
 
 .overlaytext {
   position: absolute;
   top: 10%; 
   left: 50%; 
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -30%); 
   background-color: #000000; 
   color: Steelblue; 
-  padding: 2% 4%; 
-  font-size: 7vw; 
+  padding: 1.2% 2% 2% 2%; 
+  font-size: clamp(20px, calc(10 * 1.2vw), 50px);
   text-align: center;
   font-family:Samuel;
 }
+	  .image-container {
+		  height: 4.5%;
+		   transform: translate(0%, -9%); 
+		  max-height: 200px;
+		  min-height: 100px;
+	  }
  .divider{
    background-color:SteelBlue;
    height10px;
@@ -110,31 +121,34 @@
 	  @media (max-width:525px){
 		  .divider{
 			 transform: rotate(90deg) !important;
+			  padding-top: 10% !important;
+			  vertical-align: middle !important
 		  }
 	  }
-	  @media (max-width:630px){
+	  @media (max-width:640px){
 		  #sidebar{
 			 visibility: hidden !important;
 		  }
 	  }
-	  @media (max-width:630px){
+	  @media (max-width:640px){
 		  .mainbody{
 			 width: 100% !important;
 			  margin-left: 0px !important;
 		  }
 	  }
+	   
   </style>
   <title>Photography</title>
   
 </head>
 <body style="background-color:#454545">
-  <div id="sidebar" style="background-color:black; width:15%;height:75%;display:inline-block;vertical-align:top;margin-top:20%;position:fixed">
+  <div id="sidebar" style="background-color:black; width:15%;height:75%;display:inline-block;vertical-align:middle; margin-top:10%; z-index: 2; position:fixed">
     
-    <font style="color:white;text-align:center;font-weight:bold;">Jump To</font>
+    <font style="color:white;text-align:center;font-weight:bold;font-family:Samuel;font-size:min(3vw,38px)">Jump To</font>
     <br>
-    <a class="detail" href="photography.html" style="background-color:black;font-family:helvetica;margin-bottom:5px">Full Portfolio</a> 
+    <a class="detail" href="index.html" style="background-color:black;font-family:helvetica;margin-bottom:5px">Main Page</a> 
     <br><br>
-    <a class="detail" href="photography.html" style="background-color:black;font-family:helvetica;text-decoration:none;margin-bottom:5px">Video Reel</a>
+    <a class="detail" href="Video Reel.html" style="background-color:black;font-family:helvetica;text-decoration:none;margin-bottom:5px">Video Reel</a>
     <br>
     <br>
     <a class="detail" href="photography.html" style="background-color:black;font-family:helvetica;text-decoration:none;margin-bottom:5px">Graphics</a>
@@ -143,15 +157,16 @@
     <br><br>
     <img src="Mine.jpg" style="width:100%">
     <br><br>
-    <font style="color:white;text-align:center;font-weight:bold">  &nbsp;&nbsp;About Me 
-      <br><font style="font-weight:normal; color:LightGray">I am a media man making media stuff on my media computer mm yes media  </font>
+    <font style="color:white;text-align:center;font-weight:bold; font-family: Samuel">  &nbsp;&nbsp;About Me 
+      <br><font style="font-weight:normal; color:LightGray; font-family: Alte; font-size:min(1.6vw,16px)">I love capturing emotions and natural beauty through photography. You can find me in the woods or on the streets with my white camera</font>
       
-  </div>
+	  </font></div>
     <div class="bar">&nbsp;</div>
     <br><br>  <br>
-    <img class="image-container" id="HeaderImage" src="" alt="Displayed Image">
-
-      <br><br>  <br>
+	 <div class="image-container">
+    <img id="HeaderImage" src="web-droplets-cropped.JPG" alt="Displayed Image">
+</div> 
+      
   <h2 class="overlaytext">
    Photography
   </h2>
@@ -159,7 +174,7 @@
     <br><br>
     <div class="mainbody" >
     <div class="imagedisplay">  
-      <img src="Music.jpg">
+      <img src="butterfry.jpg">
       <p>This is a fine piece of screenshot art right here
         i think screenshots should be appreciated more as art
         this should be in a museum
@@ -167,7 +182,7 @@
     </div> <!--this is closing the firtst imagedisplay-->
       <div class="divider">&nbsp;</div>
       <div class="imagedisplay">
-        <img src="Rat.jpg">
+        <img src="filmnoir1-blinds.JPG">
         <p>this is a glorious rodent. you shall worship and admire her.
           she is a goddess. she is to be exhalted.
         </p>
