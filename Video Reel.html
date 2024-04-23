@@ -2,28 +2,65 @@
 <html>
 <head>
 <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Video Reel</title>
+	<style>
+	 @font-face { font-family: Samuel; src: url('Samuel.ttf'); } 
+      h1 {
+         font-family:Samuel;
+        font-size:10vw;
+      }
+      @font-face { font-family: Alte; src: url('Alte.ttf'); } 
+  p {
+    font-family:Alte;
+    color:OldLace;
+  }
+		.tittext{
+			color:white;
+			text-align:center;
+			font-weight:bold;
+			font-family:Samuel;
+			font-size:min(3vw,38px);
+			margin-left: 8%;
+		}
+		.detail{
+			background-color:black;
+			font-family:Alte;
+			text-decoration:none;
+			margin-bottom:5px;
+			color: slateblue;
+		}
+		.bar{
+    height:2%;
+    width:100%;
+   background-color:slateblue;
+    display:inline-block;
+  }
+	
+	
+	</style>
 </head>
 
-<body>
+<body style="background-color:#454545">
 	<div id="sidebar" style="background-color:black; width:15%;height:75%;display:inline-block;vertical-align:middle; margin-top:10%; z-index: 2; position:fixed">
     
-    <font style="color:white;text-align:center;font-weight:bold;font-family:Samuel;font-size:min(3vw,38px)">Jump To</font>
+    <font class="tittext">Jump To</font>
     <br>
     <a class="detail" href="index.html" style="background-color:black;font-family:helvetica;margin-bottom:5px">Main Page</a> 
     <br><br>
-    <a class="detail" href="Video Reel.html" style="background-color:black;font-family:helvetica;text-decoration:none;margin-bottom:5px">Video Reel</a>
+    <a class="detail" href="photography.html">Photography Portfolio</a>
     <br>
     <br>
-    <a class="detail" href="photography.html" style="background-color:black;font-family:helvetica;text-decoration:none;margin-bottom:5px">Graphics</a>
+    <a class="detail" href="graphics.html" style="background-color:black;font-family:helvetica;text-decoration:none;margin-bottom:5px">Graphics</a>
     <br><br>
-    <a class="detail" href="photography.html" style="background-color:black;font-family:helvetica;text-decoration:none;margin-bottom:5px">Contact</a>
+    <a class="detail" href="about.html" style="background-color:black;font-family:helvetica;text-decoration:none;margin-bottom:5px">About and Contact</a>
     <br><br>
-    <img src="Mine.jpg" style="width:100%">
+    <img src="Mine.png" style="width:100%">
     <br><br>
-    <font style="color:white;text-align:center;font-weight:bold; font-family: Samuel">  &nbsp;&nbsp;About Me 
+		<font class="tittext">  &nbsp;&nbsp;&nbsp;&nbsp;About Me </font>
       <br><font style="font-weight:normal; color:LightGray; font-family: Alte; font-size:min(1.6vw,16px)">I love capturing emotions and natural beauty through photography. You can find me in the woods or on the streets with my white camera</font>
       
 	  </font></div>
+	<div class="bar">&nbsp;</div>
 </body>
 </html>
