@@ -18,8 +18,20 @@
     color:IndianRed
   }
   .bar{
-    background-color:IndianRed
+    background-color:IndianRed;
+	  height:2%;
+	  width:100%
   }
+	  .sidebar{
+		  background-color:black;
+		  width:15%;
+		  height:72%;
+		  display:inline-block;
+		  vertical-align:top;
+		  margin-top:5%;
+		  position:fixed;
+		  max-width: 200px;
+	  }
 	  .linky{
 		  background-color:black;
 		  font-family:Alte;
@@ -27,7 +39,35 @@
 		  margin-bottom:5px;
 		  color:IndianRed;
 		font-size:1.6vw;
-	  }	  
+	  }	 
+	  .image-container {
+		  height: 10%;
+		  max-height: 300px;
+		  min-height: 100px;
+	  }
+	  .image-container img {
+  display: inline-block;
+	width: 100%;
+	object-fit: cover;
+	object-position: 50% 50% ;
+	overflow: hidden;
+	max-height: 300px;
+	min-height: 100px;
+	opacity: 0.95;
+}
+	  .overlaytext {
+  position: absolute;
+  top: 10%; 
+  left: 50%; 
+  transform: translate(-50%, 30%); 
+  background-color: #000000; 
+  color: indianred; 
+  padding: 1.2% 2% 2% 2%; 
+  font-size: clamp(20px, calc(10 * 1.2vw), 50px);
+  text-align: center;
+  font-family:Samuel;
+}
+
 	 @media (max-width: 735px) {
     .sidebar {
         visibility: hidden; /* Hide the sidebar */
@@ -67,22 +107,29 @@
 
 <body style="background-color:#454545">
 	<div class="bar" style="width: 100%; height:2%;">&nbsp;</div>
-  <div class="sidebar" style="background-color:black; width:15%;height:72%;display:inline-block;vertical-align:top;margin-top:5%;position:fixed;max-width: 200px;">
+  <div class="sidebar">
     <font style="color:white;text-align:center;font-weight:bold;font-family: Samuel;font-size: 2.5vw;">Jump To</font>
     <a class="linky" href="photography.html" >Photography Portfolio</a> 
     <br><br>
-    <a class="linky" href="photography.html" style="background-color:black;font-family:Alte;text-decoration:none;margin-bottom:5px">Video Reel</a>
+    <a class="linky" href="Video Reel.html" style="background-color:black;font-family:Alte;text-decoration:none;margin-bottom:5px">Video Reel</a>
     <br>
     <br>
-    <a class="linky" href="photography.html" style="background-color:black;font-family:helvetica;text-decoration:none;margin-bottom:5px">Graphics</a>
+    <a class="linky" href="graphics.html" style="background-color:black;font-family:helvetica;text-decoration:none;margin-bottom:5px">Graphics</a>
     <br><br>
-    <a class="linky" href="photography.html" style="background-color:black;font-family:helvetica;text-decoration:none;margin-bottom:5px">Contact and About</a>
+    <a class="linky" href="about.html" style="background-color:black;font-family:helvetica;text-decoration:none;margin-bottom:5px">Contact and About</a>
     <br><br>
     <img src="Mine.jpg" style="width:100%">
     <br><br>
     <font style="color:white;text-align:center;font-weight:bold">  &nbsp;About Me 
       <br><font style="font-weight:normal; color:LightGray">I love making anything media related. If you can see it or hear it, I can make it.  </font>
-	  </font> </div>
+	  </font> </div> <!-- End of the sidebar  -->
+	<div class="image-container">
+	<img src="finalheadlights.jpg">
+	</div>
+	<br>
+	<div class="bar">&nbsp;</div>
+	<div class="overlaytext">
+	Anthony Butori</div>
   <div class="mainbody" style="width:84%;display:inline-block;margin-left:15.5%; min-width: 400px">
     <h1 class="detail" style="font-size: max(5vw, 30px);text-align:center;ali;background-color:black;width:100%">
     Photography
