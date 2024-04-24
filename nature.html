@@ -3,11 +3,56 @@
 <head>
 <meta charset="utf-8">
 <title>Nature</title>
+	<style>
+		h1{
+			background-color: black;
+			width: 100%;
+			padding-bottom: 2%;
+			text-decoration: none;
+			font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+			text-align: center;
+		}
+		a{
+			text-decoration: none;
+			display: inline-block;
+			text-align: center;
+		}
+		.bottombar{
+			background-color: black;
+			height: 4%;
+			width: 100%;
+		}
+		@media (max-width:675px){
+			.picture{
+				width: 100% !important;
+			}	
+		}
+	@media (max-width:500px){
+			.smallpic{
+				width: 100% !important;
+			}	
+		}
+	
+	
+	</style>
 </head>
 <body style="background-color: #454545">
-	<img src="bug-wing.JPG" style="width: 49%">
-	<img src="maxroflower.png" style="width: 49%; margin-left: 1%">
+	<img class="smallpic" src="bug-wing.JPG" style="width: 49%">
+	<img class="smallpic" src="maxroflower.png" style="width: 49%; margin-left: 1%">
 	<br><br><br><br>
-	<img src="pine-foliage.JPG" style="width: 49%">
+	<img class="picture" src="pine-foliage.JPG" style="width: 49%">
+	<br>
+	<div class="bottombar">
+	<a href="photography.html" style="text-decoration: none">
+	<h1>
+		All Photos &nbsp; | &nbsp;
+		</h1>
+	</a>
+	<a href="index.html">
+		<h1>
+			Home
+		</h1>
+	</a>
+		</div>
 </body>
 </html>
