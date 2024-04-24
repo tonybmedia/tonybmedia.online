@@ -14,7 +14,13 @@
   p {
     font-family:Alte;
     color:OldLace;
+	  font-size: clamp(20px, 2.5vw, 40px)
+	  
   }
+video{
+	width: 100%;
+	height: auto;
+		}
 		.tittext{
 			color:white;
 			text-align:center;
@@ -36,8 +42,21 @@
    background-color:slateblue;
     display:inline-block;
   }
-	
-	
+		.mainbody{
+		width:84%;
+			display:inline-block;
+			margin-left:15.5%;
+			
+		}
+		@media (max-width:525px){
+			.mainbody{
+				width: 100% !important;
+				margin-left: 0px !important;
+			}
+			.sidebar{
+				visibility: hidden !important;
+			}
+		}
 	</style>
 </head>
 
@@ -67,6 +86,11 @@
   </h1>
 	<br>
 	<div class="bar">&nbsp;</div>
+	<div class="mainbody">
+	<video src="AButori-tctc-news-intro-graphics.mp4"></video>
+		<p>This is an alternative intro for a college news program. The images represent the region the school is in and the area I grew up in.</p>
+	</div>
+	
 	
 </body>
 </html>
