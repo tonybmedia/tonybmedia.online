@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face { font-family: Samuel; src: url("/Samuel.ttf"); } 
+      h1 {
+         font-family:Samuel;
+      }
+      @font-face { font-family: Alte; src: url('Alte.ttf'); } 
+.bottombar{
+			background-color: black;
+			height: 4%;
+			width: 100%;
+		}
+a{
+	text-decoration: none;
+}
+p {
+    font-family:Alte;
+    color:OldLace;
+	  font-size:clamp(15px,3.5vw,30px)
+  }
+h1{
+	font-family: Samuel;
+	display: inline-block;
+}
