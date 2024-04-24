@@ -13,7 +13,7 @@
   p {
     font-family:Alte;
     color:OldLace;
-	  font-size: 2.5vw;
+	  font-size:clamp(15px,3.5vw,30px)
   }
   .detail{
     color:IndianRed
@@ -50,7 +50,7 @@
   display: inline-block;
 	width: 100%;
 	object-fit: cover;
-	object-position: 50% 32% ;
+	object-position: 50% 34% ;
 	overflow: hidden;
 	height: 5%;
 	max-height: 300px;
@@ -59,18 +59,18 @@
 		  filter: saturate(2.5);
 		  filter: hue-rotate(2);
 		  filter: contrast(1.05);
-			 
+		  filter: blur(0.7px)
 
 }
 	  .overlaytext {
   position: absolute;
   top: 10%; 
   left: 50%; 
-  transform: translate(-50%, 55%); 
+  transform: translate(-50%, 40%); 
   background-color: #000000; 
   color: indianred; 
   padding: 1.2% 2% 2% 2%; 
-  font-size: clamp(32px, 5vw, 70px);
+  font-size: clamp(36px, 6vw, 70px);
   text-align: center;
   font-family:Samuel;
 }
@@ -119,7 +119,7 @@
 
 <body style="background-color:#454545">
 	<div class="bar" style="width: 100%; height:2%;">&nbsp;</div>
-  <div class="sidebar">
+  <div class="sidebar"> <!-- Start of the sidebar----Start of the sidebar-->
     <font style="color:white;text-align:center;font-weight:bold;font-family: Samuel;font-size: 2.5vw;">Jump To</font>
     <a class="linky" href="photography.html" >Photography Portfolio</a> 
     <br><br>
@@ -134,11 +134,10 @@
     <br><br>
     <font style="color:white;text-align:center;font-weight:bold">  &nbsp;About Me 
       <br><font style="font-weight:normal; color:LightGray;background-color: black">I love making anything media related. If you can see it or hear it, I can make it.  </font>
-	  </font> </div> <!-- End of the sidebar  -->
+	  </font> </div> <!-- End of the sidebar--------End of the sidebar--------End of the sidebar -->
 	<div class="image-container">
 	<img src="finalheadlights.jpg">
 	</div>
-	<br>
 	<div class="bar">&nbsp;</div>
 	<div class="overlaytext">
 	Anthony Butori</div>
@@ -147,14 +146,14 @@
     Photography
   </h1>
   <p style="font-weight:575;display:inline-block;margin-right:2%">&nbsp;Below are some highlights of my photography portfolio</p>
-  <a class="detail" href="photography.html" style="background-color:black;font-family:helvetica;font-size:2.8vw;text-decoration:none;display:inline-block;margin-bottom:5px;padding:1%">Full Portfolio</a>
+  <a class="detail" href="photography.html" style="background-color:black;font-family:helvetica;font-size:clamp(15px,3.5vw,30px);text-decoration:none;display:inline-block;margin-bottom:5px;padding:1%">Full Portfolio</a>
   <div class="bar" style="height:2%;width:100%;margin-top:3%"> &nbsp;</div>
   <div style="overflow:hidden;margin-bottom:1%;margin-top:2%">
     <img src="will-glass-gel.jpg" style="width:33%;margin-bottom:5px;margin-right:3%;background-color:black;">
-    <div class="divider" style="height:100%;width:1%;background-color:black;margin-bottom:5%;float:center;display:inline-block;vertical-align:top;font-size:2vw">&nbsp;
+    <div class="divider" style="height:100%;width:1%;background-color:indianred;margin-bottom:5%;margin-top: 3%;float:center;display:inline-block;vertical-align:top;font-size:2vw">&nbsp;
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;
     </div>
-      <img src="/portfolio-shot.JPG" id="pic2" align="auto" style="overflow:hidden;width:56%;margin-bottom:5px;margin-left:3%;padding-bottom:6%;padding-top:6%;background-color:black;">
+      <img src="filmnoir2-bar.JPG" id="pic2" align="auto" style="overflow:hidden;width:56%;margin-bottom:5px;margin-left:3%;padding-bottom:6%;padding-top:6%;background-color:black;">
   </div> 
    <div class="bar" style="height:2%;width:100%"> &nbsp;</div>
   <p style="text-align:center;margin-right:5%;font-size:clamp(15px,3.5vw,23px)">These photos, like a lot of my work, were taken with the goal of creating a mysterious and dark atmosphere
