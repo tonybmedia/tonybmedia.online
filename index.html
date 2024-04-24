@@ -12,7 +12,8 @@
       @font-face { font-family: Alte; src: url('Alte.ttf'); } 
   p {
     font-family:Alte;
-    color:OldLace
+    color:OldLace;
+	  font-size: 3vw;
   }
   .detail{
     color:IndianRed
@@ -25,7 +26,7 @@
 	  .sidebar{
 		  background-color:black;
 		  width:15%;
-		  height:72%;
+		  height:80%;
 		  display:inline-block;
 		  vertical-align:top;
 		  margin-top:5%;
@@ -49,7 +50,7 @@
   display: inline-block;
 	width: 100%;
 	object-fit: cover;
-	object-position: 50% 50% ;
+	object-position: 50% 35% ;
 	overflow: hidden;
 	max-height: 300px;
 	min-height: 100px;
@@ -59,7 +60,7 @@
   position: absolute;
   top: 10%; 
   left: 50%; 
-  transform: translate(-50%, 30%); 
+  transform: translate(-50%, 55%); 
   background-color: #000000; 
   color: indianred; 
   padding: 1.2% 2% 2% 2%; 
@@ -83,15 +84,20 @@
 			 width:100% !important;
 		  }
 	  }
-@media (min-width:525px) and (max-width:735px) {
+@media (max-width:735px) {
     .mainbody {
        width: 100% !important;
     }
+	iframe{
+			  margin-left: 0px !important;
+			  width: 100% !important;
+		  }
 }
 	  @media (max-width:525px){
 		  .divider{
 			 visibility: hidden !important;
 		  }
+		  
 	  }
 	   @media (max-width:525px){
 		  #pic2{
@@ -118,10 +124,10 @@
     <br><br>
     <a class="linky" href="about.html" style="background-color:black;font-family:helvetica;text-decoration:none;margin-bottom:5px">Contact and About</a>
     <br><br>
-    <img src="Mine.jpg" style="width:100%">
+    <img src="Mine.png" style="width:100%">
     <br><br>
     <font style="color:white;text-align:center;font-weight:bold">  &nbsp;About Me 
-      <br><font style="font-weight:normal; color:LightGray">I love making anything media related. If you can see it or hear it, I can make it.  </font>
+      <br><font style="font-weight:normal; color:LightGray;background-color: black">I love making anything media related. If you can see it or hear it, I can make it.  </font>
 	  </font> </div> <!-- End of the sidebar  -->
 	<div class="image-container">
 	<img src="finalheadlights.jpg">
@@ -134,7 +140,7 @@
     <h1 class="detail" style="font-size: max(5vw, 30px);text-align:center;ali;background-color:black;width:100%">
     Photography
   </h1>
-  <p style="color:OldLace;font-weight:bold;font-size:2.3vw;display:inline-block;margin-right:5%">&nbsp;Below are some highlights of my photography portfolio</p>
+  <p style="font-weight:575;display:inline-block;margin-right:2.3%">&nbsp;Below are some highlights of my photography portfolio</p>
   <a class="detail" href="photography.html" style="background-color:black;font-family:helvetica;font-size:2.8vw;text-decoration:none;display:inline-block;margin-bottom:5px;padding:1%">Full Portfolio</a>
   <div class="bar" style="height:2%;width:100%;margin-top:3%"> &nbsp;</div>
   <div style="overflow:hidden;margin-bottom:1%;margin-top:2%">
@@ -145,15 +151,13 @@
       <img src="/portfolio-shot.JPG" id="pic2" align="auto" style="overflow:hidden;width:56%;margin-bottom:5px;margin-left:3%;padding-bottom:6%;padding-top:6%;background-color:black;">
   </div> 
    <div class="bar" style="height:2%;width:100%"> &nbsp;</div>
-    </div>
-    
-  <p  style="margin-left:20%;margin-right:5%;font-family:Alte;font-size:15px;color:OldLace">blurb of text about me as a photographer and telling the viewer about my approach and 
-    my reason for taking photos
+  <p style="text-align:center;margin-right:5%;font-size:clamp(15px,3.5vw,23px)">These photos, like a lot of my work, were taken with the goal of creating a mysterious and dark atmosphere
   </p>
+	  </div>
 	<h1 class="detail" style="font-size: max(5vw, 30px);text-align:center;background-color:black;width:100%">
     Video Reel
   </h1>
-	<iframe src="https://youtu.be/OJflDmm_yVw" style="width: 80%;height: 50%; margin-left: 15"></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/OJflDmm_yVw?si=nVGtsVAR8ihbXbch" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 	
   <h1 style="width:100%;height:100px;background-color:black;color: oldlace;font-size: max(4vw, 20px);text-align: center">
  you know how to get in touch :) <br>
