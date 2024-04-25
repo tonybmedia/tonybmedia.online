@@ -31,6 +31,7 @@
   p {
     font-family:Alte;
     color:OldLace;
+	  font-size: clamp(17px,4vw,32px);
   }
   .imagedisplay{
    display:inline-block;
@@ -47,8 +48,13 @@
   }
 	  .imagedisplay img:hover{
     opacity: 0.5;
-    
-  }
+  } 
+	  #portraits{
+		  display: none;
+	  }
+	  #portraits2{
+		  display: none;
+	  }
   .mainbody{
    display:inline-block;
     width:83%;
@@ -207,12 +213,62 @@
 		 <p style="margin-left: 7%">This is my series of images inspired by the song "The Dirt I'm Buried In" by Avatar. The aesthetic of this project involves bright lights, themes of desperation and lonliness, and dark themes hidden by bright instrumentals.
         </p>
 		<div class="imagedisplay">
+			<button onClick="show()" onDblClick="hide()" id="headshot">
 		<img src="studio-portrait-edited.jpg">
+				</button>
+			 <script>
+        function show() {
+            /* Access image by id and change 
+            the display property to block*/
+            document.getElementById('portraits')
+                .style.display = "block";
+			document.getElementById('portraits2')
+                .style.display = "block";
+                   }
+				 function hide() {
+            /* Access image by id and change 
+            the display property to none*/
+            document.getElementById('portraits')
+                .style.display = "none";
+					 document.getElementById('portraits2')
+                .style.display = "none";
+                   }
+    </script>
+			<p>This was taken for a professional photoshoot of a client who worked as a hairdresser. click to see more images.
+			</p>
+			<table id="portraits">
+				<tr>
+				<td>
+					<img src="combs-pocket-portrait.jpg">
+				</td>
+				<td>
+					<img src="studio-full-torso-blackbg.jpg">
+				</td>
+					</tr>
+				<tr>Double click to collapse</tr>
+			</table>
 		</div>
 		<div class="vertdivider">&nbsp;</div>
 		<div class="imagedisplay">
 		<img src="will-glass-gel.jpg">
+			<p>Part of a story in photos. Here, a cult member brings you a chalice filled with a mysterious substance. </p>
+			<table id="portraits2">
+				<td style="width: 50%">
+					<img src="action3.jpeg">
+				</td>
+				<td>
+					<img src="edited-posed-portrait.jpg">
+				</td>
+			</table>
 		</div>
+		<div class="imagedisplay">
+		<img src="valleyway.jpg">
+		</div>
+		<div class="vertdivider">&nbsp;</div>
+		<div class="imagedisplay">
+		<img src="sky.jpg">
+		</div>
+		
 		
 </div>
 </body>
