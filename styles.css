@@ -1,6 +1,6 @@
 @charset "utf-8";
-/* CSS Document */
-@font-face { font-family: Samuel; src: url("/Samuel.ttf"); } 
+/* CSS Document linked to about page and home page */
+@font-face { font-family: Samuel; src: url('Samuel.ttf'); } 
       h1 {
          font-family:Samuel;
       }
@@ -16,9 +16,13 @@ a{
 p {
     font-family:Alte;
     color:OldLace;
-	  font-size:clamp(15px,3.5vw,30px)
+	  font-size:clamp(15px,3vw,30px)
   }
 h1{
 	font-family: Samuel;
 	display: inline-block;
 }
+.bar{
+	  height:2%;
+	  width:100%
+  }
