@@ -31,7 +31,7 @@
   p {
     font-family:Alte;
     color:OldLace;
-	  font-size: clamp(17px,4vw,32px);
+	  font-size: clamp(17px,3vw,32px);
   }
   .imagedisplay{
    display:inline-block;
@@ -140,6 +140,11 @@
 			  padding-top: 10% !important;
 			  vertical-align: middle !important
 		  }
+		  .vertdivider{
+			   transform: rotate(90deg) !important;
+			  padding-top: 10% !important;
+			  vertical-align: middle !important
+		  }
 	  }
 	  @media (max-width:640px){
 		  #sidebar{
@@ -236,6 +241,14 @@
     </script>
 			<p>This was taken for a professional photoshoot of a client who worked as a hairdresser. click to see more images.
 			</p>
+			
+		</div>
+		<div class="vertdivider">&nbsp;</div>
+		<div class="imagedisplay">
+		<img src="will-glass-gel.jpg">
+			<p>Part of a story in photos. Here, a cult member brings you a chalice filled with a mysterious substance. </p>
+			</div>
+			<div class="imagedisplay">
 			<table id="portraits">
 				<tr>
 				<td>
@@ -246,12 +259,9 @@
 				</td>
 					</tr>
 				<tr>Double click to collapse</tr>
-			</table>
-		</div>
-		<div class="vertdivider">&nbsp;</div>
-		<div class="imagedisplay">
-		<img src="will-glass-gel.jpg">
-			<p>Part of a story in photos. Here, a cult member brings you a chalice filled with a mysterious substance. </p>
+			</table><!-- Ending the table-->
+			</div><!--ending the container for the table-->
+		<div class="imagedisplay"><!-- containing the second table-->
 			<table id="portraits2">
 				<td style="width: 50%">
 					<img src="action3.jpeg">
@@ -260,7 +270,7 @@
 					<img src="edited-posed-portrait.jpg">
 				</td>
 			</table>
-		</div>
+		</div><!-- closing the tables for good-->
 		<div class="imagedisplay">
 		<img src="valleyway.jpg">
 		</div>
