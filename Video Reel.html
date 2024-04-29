@@ -8,7 +8,9 @@
 	 @font-face { font-family: Samuel; src: url('Samuel.ttf'); } 
       h1 {
          font-family:Samuel;
-        font-size:10vw;
+        font-size:max(3vw,20px);
+		  display: inline-block;
+		  text-align: center
       }
       @font-face { font-family: Alte; src: url('Alte.ttf'); } 
   p {
@@ -17,6 +19,11 @@
 	  font-size: clamp(20px, 2.5vw, 40px)
 	  
   }
+		.bottombar{
+			background-color: black;
+			height: 4%;
+			width: 100%;
+		}
 video{
 	width: 100%;
 	height: auto;
@@ -56,12 +63,15 @@ video{
 			#sidebar{
 				visibility: hidden !important;
 			}
+			#centerer{
+				width: 0px !important;
+			}
 		}
 	</style>
 </head>
 
 <body style="background-color:#454545"><!-- sidebar-->
-	<div id="sidebar" style="background-color:black; width:15%;height:75%;display:inline-block;vertical-align:middle; margin-top:10%; z-index: 2; position:fixed">
+	<div id="sidebar" style="background-color:black; width:15%;height:70%;display:inline-block;vertical-align:middle; margin-top:10%; z-index: 2; position:fixed">
     
     <font class="tittext">Jump To</font>
     <br>
@@ -89,6 +99,35 @@ video{
 	<div class="mainbody">
 	<video controls src="AButori-tctc-news-intro-graphics.mp4" width="80%"></video>
 		<p>This is an alternative intro for a college news program. The images represent the region the school is in and the area I grew up in.</p>
+		<video controls src="AButori-delta-ad.mp4" width="80%"></video>
+		<p>A sample ad for the Delta Skymiles card</p>
+		<video controls src="AButori-commercial-thai-crab.mp4" width="80%"></video>
+		<p>A graphic ad for a local thai restaurant</p>
+		<iframe width="100%" height="600" src="https://www.youtube.com/embed/SfkJjZTK9ok?si=T18BNMpdBZZV6bdm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		<p>A ford taurus commercial I shot and edited</p>
+		
+	</div>
+	<div class="bottombar" style="z-index: 3">
+		<div id="centerer" style="width: 25%; display: inline-block">&nbsp;</div>
+		<a href="index.html">
+	<h1>
+		Home &nbsp; | &nbsp;
+		</h1>
+	</a>
+	<a href="graphics.html">
+		<h1>
+			Graphic Design &nbsp; | &nbsp;
+		</h1>
+	</a>
+		<a href="photography.html">
+	<h1>
+		Photography &nbsp; | &nbsp;
+		</h1>
+	</a>
+		<a href="about.html">
+			<h1>About</h1></a>
+		<br>
+		<p style="text-align: center">anthony.butori@gmail.com</p>
 	</div>
 	
 	
