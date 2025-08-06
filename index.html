@@ -1,186 +1,479 @@
 <!DOCTYPE html>
-
 <html>
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-  <style>
-     @font-face { font-family: Samuel; src: url('Samuel.ttf'); } 
-      h1 {
-         font-family:Samuel
-      }
-      @font-face { font-family: Alte; src: url('Alte.ttf'); } 
-  p {
-    font-family:Alte;
-    color:OldLace;
-	  font-size:clamp(15px,3vw,30px);
-  }
-  .detail{
-    color:IndianRed
-  }
-  .bar{
-    background-color:IndianRed;
-	  height:2%;
-	  width:100%
-  }
-	  .sidebar{
-		  background-color:black;
-		  width:15%;
-		  height:80%;
-		  display:inline-block;
-		  vertical-align:top;
-		  margin-top:5%;
-		  position:fixed;
-		  max-width: 200px;
-	  }
-	  .linky{
-		  background-color:black;
-		  font-family:Alte;
-		  text-decoration:none;
-		  margin-bottom:5px;
-		  color:IndianRed;
-		font-size:1.6vw;
-	  }	 
-	  
-	  .image-container {
-		  height: 5%;
-		  max-height: 300px;
-		  min-height: 100px;
-	  }
-	  .image-container img {
-  display: inline-block;
-	width: 100%;
-	object-fit: cover;
-	object-position: 50% 34% ;
-	overflow: hidden;
-	height: 5%;
-	max-height: 300px;
-	min-height: 100px;
-	opacity: 0.95;
-		  filter: saturate(2.5);
-		  filter: hue-rotate(2);
-		  filter: contrast(1.05);
-		  filter: blur(0.7px)
-
-}
-	  .overlaytext {
-  position: absolute;
-  top: 10%; 
-  left: 50%; 
-  transform: translate(-50%, 40%); 
-  background-color: #000000; 
-  color: indianred; 
-  padding: 1.2% 2% 2% 2%; 
-  font-size: clamp(40px, 6vw, 75px);
-  text-align: center;
-  font-family:Samuel;
-}
-
-	 @media (max-width: 735px) {
-    .sidebar {
-        visibility: hidden; /* Hide the sidebar */
-    }
-		 #thebutoon{
-			 margin-left: 38.5% !important;
-		 }
-}
-	  @media (max-width:735px){
-		  .mainbody{
-			  margin-left: 0px !important;
-		  }
-	  }
- @media (max-width:525px){
-		  img{
-			 width:100% !important;
-		  }
-	  }
-@media (max-width:735px) {
-    .mainbody {
-       width: 100% !important;
-    }
-	iframe{
-			  margin-left: 0px !important;
-			  width: 100% !important;
-		  }
-	p{
-		text-align: center !important;
-		display: block !important;
-	}
-	
-}/* closemedia*/
-	  @media (max-width:525px){
-		  .divider{
-			 visibility: hidden !important;
-		  }
-		  
-	  }
-	   @media (max-width:525px){
-		  #pic2{
-			 transform: translate(0%,-50%)!important;
-		  }
-	  }
-
-
-    </style>
-  <title>Anthony Butori</title>
   
+  <style>
+    @font-face { font-family: Samuel; src: url('Samuel.ttf'); } 
+    h1 {
+      font-family: Samuel;
+      transition: all 0.3s ease;
+    }
+    @font-face { font-family: Alte; src: url('Alte.ttf'); } 
+    
+    p {
+      font-family: Alte;
+      color: OldLace;
+      font-size: clamp(15px,3vw,30px);
+      transition: all 0.3s ease;
+    }
+    
+    .detail {
+      color: IndianRed;
+      transition: all 0.3s ease;
+    }
+    
+    .bar {
+      background-color: IndianRed;
+      height: 2%;
+      width: 100%;
+      transition: all 0.3s ease;
+    }
+    
+    .sidebar {
+      background-color: black;
+      width: 15%;
+      height: 80%;
+      display: inline-block;
+      vertical-align: top;
+      position: absolute;
+      top: calc(5% + 300px + 2%);
+      left: 0;
+      max-width: 200px;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+    
+    .sidebar.scrolled {
+      position: fixed;
+      top: 20px;
+    }
+    
+    .linky {
+      background-color: black;
+      font-family: Alte;
+      text-decoration: none;
+      margin-bottom: 5px;
+      color: IndianRed;
+      font-size: 1.6vw;
+      transition: all 0.3s ease;
+      display: block;
+      padding: 5px;
+    }
+    
+    .linky:hover {
+      background-color: IndianRed;
+      color: white;
+      transform: translateX(5px);
+    }
+    
+    .image-container {
+      height: 5%;
+      max-height: 300px;
+      min-height: 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .image-container img {
+      display: inline-block;
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 34%;
+      overflow: hidden;
+      height: 5%;
+      max-height: 300px;
+      min-height: 100px;
+      opacity: 0.95;
+      filter: saturate(2.5) hue-rotate(2deg) contrast(1.05) blur(0.7px);
+      transition: all 0.5s ease;
+    }
+    
+    .image-container:hover img {
+      transform: scale(1.05);
+      filter: saturate(3) hue-rotate(5deg) contrast(1.1) blur(0.3px);
+    }
+    
+    .overlaytext {
+      position: absolute;
+      top: 10%; 
+      left: 50%; 
+      transform: translate(-50%, 40%); 
+      background-color: rgba(0, 0, 0, 0.8);
+      color: indianred; 
+      padding: 1.2% 2% 2% 2%; 
+      font-size: clamp(40px, 6vw, 75px);
+      text-align: center;
+      font-family: Samuel;
+      backdrop-filter: blur(5px);
+      border-radius: 10px;
+      animation: fadeInUp 1s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate(-50%, 60%);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, 40%);
+      }
+    }
+    
+    @keyframes slideInFromLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .portfolio-image {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .portfolio-image:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 30px rgba(205, 92, 92, 0.3);
+    }
+    
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1001;
+      background: IndianRed;
+      border: none;
+      color: white;
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .hamburger:hover {
+      background: #B22222;
+      transform: scale(1.1);
+    }
+    
+    .scroll-indicator {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: linear-gradient(90deg, IndianRed, #B22222);
+      z-index: 1002;
+      transition: width 0.1s ease;
+    }
+    
+    .typing-animation {
+      border-right: 2px solid IndianRed;
+      animation: blink 1s infinite;
+    }
+    
+    @keyframes blink {
+      0%, 50% { border-color: IndianRed; }
+      51%, 100% { border-color: transparent; }
+    }
+    
+    .bounce-button {
+      animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+    
+    @media (max-width: 735px) {
+      .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        top: 20px;
+        height: calc(100vh - 40px);
+      }
+      
+      .sidebar.show {
+        transform: translateX(0);
+      }
+      
+      .hamburger {
+        display: block;
+      }
+      
+      #thebutoon {
+        margin-left: 38.5% !important;
+      }
+      
+      .mainbody {
+        margin-left: 0px !important;
+        width: 100% !important;
+      }
+      
+      iframe {
+        margin-left: 0px !important;
+        width: 100% !important;
+      }
+      
+      p {
+        text-align: center !important;
+        display: block !important;
+      }
+    }
+    
+    @media (max-width: 525px) {
+      img {
+        width: 100% !important;
+      }
+      
+      .divider {
+        visibility: hidden !important;
+      }
+      
+      #pic2 {
+        transform: translate(0%, -50%) !important;
+      }
+    }
+  </style>
+  <title>Anthony Butori</title>
 </head>
 
 <body style="background-color:#454545">
-	<div class="bar" style="width: 100%; height:2%;">&nbsp;</div>
-  <div class="sidebar"> <!-- Start of the sidebar----Start of the sidebar-->
-    <font style="color:white;text-align:center;font-weight:bold;font-family: Samuel;font-size: 2.5vw;">Jump To</font>
-    <a class="linky" href="photography.html" >Photography Portfolio</a> 
+  <div class="scroll-indicator" id="scrollIndicator"></div>
+  
+  <button class="hamburger" id="hamburger" onclick="toggleSidebar()">☰</button>
+  
+  <div class="bar" style="width: 100%; height:2%;">&nbsp;</div>
+  
+  <div class="sidebar" id="sidebar">
+    <font style="color:white;text-align:center;font-weight:bold;font-family: Samuel;font-size: 2.5vw;">See My Work</font>
+    <a class="linky" href="photography.html">Photography Portfolio</a> 
     <br><br>
-    <a class="linky" href="Video Reel.html" style="background-color:black;font-family:Alte;text-decoration:none;margin-bottom:5px">Video Editing</a>
-    <br>
-    <br>
-    <a class="linky" href="graphics.html" style="background-color:black;font-family:helvetica;text-decoration:none;margin-bottom:5px">Graphics</a>
+    <a class="linky" href="Video Reel.html">Video Editing</a>
     <br><br>
-    <a class="linky" href="about.html" style="background-color:black;font-family:helvetica;text-decoration:none;margin-bottom:5px">Contact and About</a>
+    <a class="linky" href="graphics.html">Graphics</a>
+    <br><br>
+    <a class="linky" href="about.html">Contact and About</a>
     <br><br>
     <img src="Mine.png" style="width:100%">
     <br><br>
     <font style="color:white;text-align:center;font-weight:bold;font-family: Alte">  &nbsp;About Me 
-      <br><font style="font-weight:normal; color:LightGray;background-color: black;font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif'">I love making anything media related. If you can see it or hear it, I can make it.  </font>
-	  </font> </div> <!-- End of the sidebar--------End of the sidebar--------End of the sidebar -->
-	<div class="image-container">
-	<img src="finalheadlights.jpg">
-	</div>
-	<div class="bar">&nbsp;</div>
-	<div class="overlaytext">
-	Anthony Butori</div>
-	<h1 class="detail" style="font-size: clamp(25px, 4vw, 50px);text-align:center;ali;background-color:black;width:100%">
+      <br><font style="font-weight:normal; color:LightGray;background-color: black;font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif'">I love making anything media related. If you can see it or hear it, I can make it.</font>
+    </font>
+  </div>
+  
+  <div class="image-container">
+    <img src="finalheadlights.jpg">
+  </div>
+  
+  <div class="bar">&nbsp;</div>
+  
+  <div class="overlaytext">
+    <span id="typewriter"></span>
+  </div>
+  
+  <h1 class="detail fade-in" style="font-size: clamp(25px, 4vw, 50px);text-align:center;background-color:black;width:100%">
     Photography
   </h1>
+  
   <div class="mainbody" style="width:84%;display:inline-block;margin-left:15.5%;">
+    <p class="fade-in" style="font-weight:575;display:inline-block;margin-right:2%;">
+      I'm a photographer, videographer, and editor with a degree in Media Arts Production, and I've been featured as one of <a class="linky" style="background-color: transparent; font-size: clamp(15px,3vw,30px); color: IndianRed; display:inline-block" href="https://www.snappr.com/best-photographers/greenville-sc">the best photographers in Greenville</a><br><br>
+      &nbsp;Here are some highlights from my photography portfolio
+    </p>
     
-  <p style="font-weight:575;display:inline-block;margin-right:2%;">I've been featured as one of <a class="linky" style="background-color: transparent" href="https://www.snappr.com/best-photographers/greenville-sc">the best photographers in Greenville</a> <br> <br> <br>
-	  &nbsp;Below are some highlights of my photography portfolio</p>
-  <a class="detail" id="thebutoon" href="photography.html" style="background-color:black;font-family:helvetica;font-size:clamp(15px,3.5vw,30px);text-decoration:none;display:inline-block;margin-bottom:5px;padding:1%;font-family:Alte;margin-left: 10%;font-weight: bolder">Full Portfolio</a>
-  <div class="bar" style="height:2%;width:100%;margin-top:3%"> &nbsp;</div>
-  <div style="overflow:hidden;margin-bottom:1%;margin-top:2%">
-    <img src="will-glass-gel.jpg" style="width:33%;margin-bottom:5px;margin-right:3%;background-color:black;">
-    <div class="divider" style="height:100%;width:1%;background-color:indianred;margin-bottom:5%;margin-top: 3%;float:center;display:inline-block;vertical-align:top;font-size:2vw">&nbsp;
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;
-    </div>
-      <img src="filmnoir2-bar.JPG" id="pic2" align="auto" style="overflow:hidden;width:56%;margin-bottom:5px;margin-left:3%;padding-bottom:6%;padding-top:6%;background-color:black;">
-  </div> 
-   <div class="bar" style="height:2%;width:100%"> &nbsp;</div>
-  <p style="text-align:center;margin-right:5%;font-size:clamp(15px,3.5vw,23px)">These photos, like a lot of my work, were taken with the goal of creating a mysterious and dark atmosphere
-  </p>
-	  </div>
-	<h1 class="detail" style="font-size: max(5vw, 30px);text-align:center;background-color:black;width:100%">
+    <a class="detail bounce-button" id="thebutoon" href="photography.html" style="background-color:black;font-family:helvetica;font-size:clamp(15px,3.5vw,30px);text-decoration:none;display:inline-block;margin-bottom:5px;padding:1%;font-family:Alte;margin-left: 10%;font-weight: bolder">Full Portfolio</a>
+    
+    <div class="bar fade-in" style="height:2%;width:100%;margin-top:3%"> &nbsp;</div>
+    
+    <div class="fade-in" style="overflow:hidden;margin-bottom:1%;margin-top:2%">
+      <img src="maternity23-kiss4.jpg" class="portfolio-image" style="width:33%;margin-bottom:5px;margin-right:3%;background-color:black;">
+      <div class="divider" style="height:100%;width:1%;background-color:indianred;margin-bottom:5%;margin-top: 3%;float:center;display:inline-block;vertical-align:top;font-size:2vw">&nbsp;
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;
+      </div>
+      <img src="filmnoir2-bar.JPG" id="pic2" class="portfolio-image" align="auto" style="overflow:hidden;width:56%;margin-bottom:5px;margin-left:3%;padding-bottom:6%;padding-top:6%;background-color:black;">
+	  <img src="NIGHT4-Starr-Home-Front.jpg" id="pic2" class="portfolio-image" align="auto" style="overflow:hidden;width:56%;margin-bottom:5px;margin-right:3%;padding-bottom:6%;padding-top:6%;background-color:black;">
+	  <div class="divider" style="height:100%;width:1%;background-color:indianred;margin-bottom:5%;margin-top: 3%;float:center;display:inline-block;vertical-align:top;font-size:2vw">&nbsp;
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;
+      </div>
+	  <img src="NIGHT12-fountain.jpg" class="portfolio-image" style="width:33%;margin-bottom:5px;margin-left:3%;background-color:black;">
+    </div> 
+    
+    <div class="bar fade-in" style="height:2%;width:100%"> &nbsp;</div>
+    
+    <p class="fade-in" style="text-align:center;margin-right:5%;font-size:clamp(15px,3.5vw,23px)">
+      I dont just take great photos, check out my video and audio work
+    </p>
+  </div>
+  
+  <h1 class="detail fade-in" style="font-size: max(5vw, 30px);text-align:center;background-color:black;width:100%">
     Video Reel
   </h1>
-	<iframe width="80%" height="600" style="margin-left: 16%" src="https://www.youtube.com/embed/OJflDmm_yVw?si=nVGtsVAR8ihbXbch" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-	
- 
-	<h1 style="width:100%;height:100px;background-color:black;color: oldlace;font-size: max(4vw, 20px);text-align: center">
- you know how to get in touch :) <br>
+  
+  <iframe class="fade-in" width="80%" height="600" style="margin-left: 16%" src="https://www.youtube.com/embed/OJflDmm_yVw?si=nVGtsVAR8ihbXbch" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  
+  <h1 class="fade-in" style="width:100%;height:100px;background-color:black;color: oldlace;font-size: max(4vw, 20px);text-align: center">
+    you know how to get in touch :) <br>
     <p style="font-size:2vw;font-family:arial;color:white; background-color: black; width:100%"> anthonybutori@gmail.com</p>
   </h1>
-    <p></p>
+
+  <script>
+    // Typewriter effect for the main title
+    function typeWriter(text, element, speed = 100) {
+      let i = 0;
+      element.innerHTML = '';
+      
+      function type() {
+        if (i < text.length) {
+          element.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        } else {
+          element.classList.add('typing-animation');
+        }
+      }
+      type();
+    }
+    
+    // Handle sidebar scroll behavior
+    function handleSidebarScroll() {
+      const sidebar = document.getElementById('sidebar');
+      const scrollTop = window.pageYOffset;
+      
+      // Calculate the height of the banner section (first bar + image + second bar)
+      const firstBar = document.querySelector('.bar');
+      const imageContainer = document.querySelector('.image-container');
+      const bannerHeight = firstBar.offsetHeight + imageContainer.offsetHeight + firstBar.offsetHeight;
+      
+      if (scrollTop > bannerHeight) {
+        sidebar.classList.add('scrolled');
+      } else {
+        sidebar.classList.remove('scrolled');
+      }
+    }
+    
+    // Update scroll indicator and handle sidebar
+    function updateScrollIndicator() {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.body.offsetHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      document.getElementById('scrollIndicator').style.width = scrollPercent + '%';
+      
+      // Handle sidebar scroll
+      handleSidebarScroll();
+    }
+    
+    // Fade in animation on scroll
+    function fadeInOnScroll() {
+      const elements = document.querySelectorAll('.fade-in');
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+          element.classList.add('visible');
+        }
+      });
+    }
+    
+    // Toggle sidebar for mobile
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('show');
+    }
+    
+    // Close sidebar when clicking outside
+    document.addEventListener('click', function(event) {
+      const sidebar = document.getElementById('sidebar');
+      const hamburger = document.getElementById('hamburger');
+      
+      if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
+        sidebar.classList.remove('show');
+      }
+    });
+    
+    // Smooth scrolling for links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    
+    // Add click animation to portfolio images
+    document.querySelectorAll('.portfolio-image').forEach(img => {
+      img.addEventListener('click', function() {
+        this.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+          this.style.transform = 'scale(1.02)';
+        }, 150);
+      });
+    });
+    
+    // Initialize everything when page loads
+    window.addEventListener('load', function() {
+      // Start typewriter effect
+      const typewriterElement = document.getElementById('typewriter');
+      typeWriter('Anthony Butori', typewriterElement, 150);
+      
+      // Initial fade in check
+      fadeInOnScroll();
+      
+      // Add some delay to make the entrance more dramatic
+      setTimeout(() => {
+        document.querySelectorAll('.fade-in').forEach((element, index) => {
+          setTimeout(() => {
+            element.style.animationDelay = `${index * 0.1}s`;
+          }, index * 100);
+        });
+      }, 1000);
+    });
+    
+    // Event listeners
+    window.addEventListener('scroll', function() {
+      updateScrollIndicator();
+      fadeInOnScroll();
+    });
+    
+    // Add parallax effect to header image
+    window.addEventListener('scroll', function() {
+      const scrolled = window.pageYOffset;
+      const headerImg = document.querySelector('.image-container img');
+      if (headerImg) {
+        headerImg.style.transform = `translateY(${scrolled * 0.5}px)`;
+      }
+    });
+    
+    // Add hover sound effect (optional - you can add actual audio files)
+    document.querySelectorAll('.linky').forEach(link => {
+      link.addEventListener('mouseenter', function() {
+        // You can add audio here if you have sound files
+        // new Audio('hover-sound.mp3').play();
+      });
+    });
+  </script>
 </body>
 </html>
